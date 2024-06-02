@@ -1,2 +1,3 @@
-# hls
-HTTP Live Streaming
+# HTTP Live Streaming (HLS)
+
+HLS with Clojure

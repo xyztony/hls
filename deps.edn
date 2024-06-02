@@ -1,0 +1,16 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        ring/ring-core {:mvn/version "1.12.1"}
+        aleph/aleph {:mvn/version "0.7.1"}
+        manifold/manifold {:mvn/version "0.4.3"}
+        cheshire/cheshire {:mvn/version "5.13.0"}}
+ :aliases
+ {:build {:deps {io.github.clojure/tools.build {:mvn/version "0.9.4"}
+                 slipset/deps-deploy {:mvn/version "0.2.1"}}
+          :ns-default build}
+  :test {:extra-paths ["test"]
+         :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}
+                      io.github.cognitect-labs/test-runner
+                      {:git/tag "v0.5.1" :git/sha "dfb30dd"}}}
+  :nREPL {:extra-deps
+   {nrepl/nrepl {:mvn/version "1.1.0"}}}}}
